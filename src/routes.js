@@ -6,7 +6,7 @@ import Register from "./pages/Register";
 import Home from "./pages/Home";
 
 const Stack = createNativeStackNavigator();
-export default function App() {
+export default function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
