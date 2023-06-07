@@ -7,26 +7,40 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 60,
+    backgroundColor: "#E8DE5D",
+  },
+  title: {
+    fontSize: 24,
   },
   form: {
     gap: 30,
-    width: '60%'
+    width: "60%",
   },
-  inputField:{
-    display: 'flex',
-    flexDirection: 'row',
-    gap: 20
+  inputField: {
+    display: "flex",
+    flexDirection: "row",
+    gap: 20,
   },
   input: {
-    borderColor: 'black',
-    height: 30,
-    width: '100%',
+    borderWidth: 2,
+    borderRadius: 10,
+    borderColor: "#000",
+    backgroundColor: "#fff",
+    opacity: 0.7,
+    width: "80%",
+    height: 40,
+    padding: 5,
+    paddingHorizontal: 10,
   },
   button: {
-    justifyContent: 'center',
-    textAlign: 'center',
-    alignItems: 'center'
-  }
+    justifyContent: "center",
+    textAlign: "center",
+    alignItems: "center",
+    backgroundColor: "#A5DB63",
+    borderRadius: 10,
+    paddingVertical: 10,
+    marginTop: 30,
+  },
 });
 
 export default styles;

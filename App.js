@@ -1,5 +1,6 @@
-import Register from "./src/pages/Register";
+import React from "react";
+import Routes from "./src/routes";
 
 export default function App() {
-  return <Register />;
+  return <Routes />;
 }

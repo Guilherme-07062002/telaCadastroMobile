@@ -5,7 +5,7 @@ import styles from "./style";
 export default function Register() {
   return (
     <View style={styles.container}>
-      <Text>Tela de Cadastro</Text>
+      <Text style={styles.title}>Tela de Cadastro</Text>
 
       <View style={styles.form}>
         <View style={styles.inputField}>
