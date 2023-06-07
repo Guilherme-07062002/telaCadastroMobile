@@ -1,8 +1,11 @@
 import { StatusBar } from "expo-status-bar";
-import { Text, View, TextInput, TouchableOpacity } from "react-native";
+import { Text, View, TextInput, TouchableOpacity, Alert } from "react-native";
 import styles from "./style";
 
 export default function Register() {
+  const showAlert = () =>
+    Alert.alert("Cadastro", "Operação realizada com sucesso");
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tela de Cadastro</Text>
@@ -33,7 +36,7 @@ export default function Register() {
           ></TextInput>
         </View>
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity onPress={showAlert} style={styles.buttonRegister}>
           <Text>Cadastrar</Text>
         </TouchableOpacity>
       </View>
