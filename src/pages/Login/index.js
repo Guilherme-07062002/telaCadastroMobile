@@ -4,7 +4,7 @@ import styles from "./style";
 import Api from "../../api";
 import { useState } from "react";
 
-export default function Login() {
+export default function Login({ navigation }) {
   const api = new Api();
   const loginUser = async() => {
     const data = {
@@ -59,6 +59,12 @@ export default function Login() {
 
         <TouchableOpacity onPress={loginUser} style={styles.buttonRegister}>
           <Text>Entrar</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => {
+          navigation.navigate("EsqueciSenha");
+        }} style={styles.buttonRegister}>
+          <Text>Esqueci minha senha</Text>
         </TouchableOpacity>
       </View>
       <StatusBar style="auto" />
