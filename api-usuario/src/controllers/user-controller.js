@@ -10,16 +10,17 @@ module.exports = {
   },
   async adicionarUsuario(request, response) {
     try {
-      const { nome, email } = request.body;
+      const { name, email, password } = request.body;
 
-      if (!nome || !email) {
+      if (!name || !email || !password) {
         response
           .status(400)
-          .json("É necessário informar nome e email do usuário.");
+          .json("É necessário informar todos os campos do usuário.");
       } else {
         User.create({
-          nome: nome,
+          name: name,
           email: email,
+          password: password
         });
 
         return response.status(200).json("Usuário registrado.");
