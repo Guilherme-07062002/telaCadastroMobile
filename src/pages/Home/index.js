@@ -14,6 +14,15 @@ export default function Home({ navigation }) {
         <Text>Cadastrar</Text>
       </TouchableOpacity>
 
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("Login");
+        }}
+        style={styles.button}
+      >
+        <Text>Login</Text>
+      </TouchableOpacity>
+
       <StatusBar style="auto" />
     </View>
   );
