@@ -20,4 +20,24 @@ export default class Api {
       console.log(error);
     }
   }
+  async validate(data) {
+    try {
+      console.log(JSON.stringify(data));
+      const response = await axios.post(
+        `http://${this.address}:3000/user/login`,
+        data,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          timeout: 5000,
+        }
+      );
+      if (response) {
+        return response.data;
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }

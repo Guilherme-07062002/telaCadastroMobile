@@ -6,13 +6,18 @@ import { useState } from "react";
 
 export default function Login() {
   const api = new Api();
-  const loginUser = () => {
+  const loginUser = async() => {
     const data = {
       name: name,
       email: email,
       password: senha,
     };
-    Alert.alert("Entrar", "Login realizado com sucesso");
+    const result = await api.validate(data)
+    if (result) {
+        Alert.alert("Entrar", "Login realizado com sucesso");
+    }else{
+        Alert.alert("Entrar", "Usuário inválido");
+    }
     // Futuramente implementar validação de usuário
   };
   const [name, setName] = useState("");

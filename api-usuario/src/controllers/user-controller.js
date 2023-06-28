@@ -38,12 +38,14 @@ module.exports = {
           .status(400)
           .json("É necessário informar todos os campos do usuário.");
       } else {
-        const responseData = User.findOne({
-          name: name,
-          email: email,
-          password: password,
+        const responseData = await User.findOne({
+          where:{
+            name: name,
+            email: email,
+            password: password,
+          }
         });
-        if (responseData) {
+        if (responseData !== null) {
           return response.status(200).json(true);
         } else {
           return response.status(200).json(false);
