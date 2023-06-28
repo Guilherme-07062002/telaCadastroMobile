@@ -13,11 +13,7 @@ export default function Login() {
       password: senha,
     };
     Alert.alert("Entrar", "Login realizado com sucesso");
-    // const response = api.save(JSON.stringify(data))
-    // console.log(data)
-    // if (response !== null) {
-    //   Alert.alert("Cadastro", "Operação realizada com sucesso");
-    // }
+    // Futuramente implementar validação de usuário
   };
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
