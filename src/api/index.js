@@ -1,6 +1,7 @@
 import axios from "axios";
 
 export default class Api {
+  // substitua address pelo endereço ip de sua máquina
   address = "192.168.0.105";
   async save(data) {
     try {
